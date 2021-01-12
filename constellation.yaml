@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orbittestservice
+  labels:
+    app: orbittestservice
+spec:
+  #replicas: 2
+  selector:
+    matchLabels:
+      app: orbittestservice
+  template:
+    metadata:
+      labels:
+        app: orbittestservice
+    spec:
+      containers:
+      - name: orbittestservice
+        image: spacexstarlink.azurecr.io/orbittestingrepo:V1.0.0.1
+        ports:
+        - containerPort: 8084
+        resources:
+          requests:
+            cpu: 250m
+            memory: 400Mi
+          limits:
+            cpu: 500m
+            memory: 400Mi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: orbittestservice
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8084
+    targetPort: 8084
+
+        
+
