@@ -1,12 +1,14 @@
 package iit.cloudcopmuting.satelite.dto;
 
+import java.math.BigDecimal;
+
 public class SateliteDetails {
 
 	private int sateliteID;
 	private String name;
 	private String description;
-	private double distance;
-	private Double health;
+	private BigDecimal distance;
+	private BigDecimal health;
 	
 	
 	public int getSateliteID() {
@@ -27,16 +29,16 @@ public class SateliteDetails {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public double getDistance() {
+	public BigDecimal getDistance() {
 		return distance;
 	}
-	public void setDistance(double distance) {
+	public void setDistance(BigDecimal distance) {
 		this.distance = distance;
 	}
-	public double getHealth() {
+	public BigDecimal getHealth() {
 		return health;
 	}
-	public void setHealth(double health) {
+	public void setHealth(BigDecimal health) {
 		this.health = health;
 	}
 	 

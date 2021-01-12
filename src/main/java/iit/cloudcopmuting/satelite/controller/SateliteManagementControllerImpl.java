@@ -45,7 +45,7 @@ public class SateliteManagementControllerImpl implements SateliteManagementContr
 
 		Response response = new Response();
 
-		if (payload.getName() != null && !payload.getName().isEmpty() && payload.getHealth() != 0 && payload.getDistance() != 0) {
+		if (payload.getName() != null && !payload.getName().isEmpty()) {
 			response = sateliteService.createSatelite(payload);
 		} else {
 			response = new Response(Response.ERROR, "ERROR", "Unacceptable payload detected");
