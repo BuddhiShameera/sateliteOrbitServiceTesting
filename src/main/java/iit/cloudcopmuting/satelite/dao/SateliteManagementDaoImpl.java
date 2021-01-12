@@ -42,8 +42,8 @@ public class SateliteManagementDaoImpl implements SateliteManagementDao{
 
 				ps.setString(1, payload.getName());
 				ps.setString(2, payload.getDescription());
-				ps.setBigDecimal(3, payload.getDistance());
-				ps.setBigDecimal(4, payload.getHealth());
+				ps.setInt(3, payload.getDistance());
+				ps.setInt(4, payload.getHealth());
 
 				return ps;
 			}
@@ -93,8 +93,8 @@ public class SateliteManagementDaoImpl implements SateliteManagementDao{
 			satelite.setSateliteID((Integer) row.get("sateliteID"));
 			satelite.setName((String) row.get("name"));
 			satelite.setDescription((String) row.get("description"));
-			satelite.setDistance((BigDecimal) row.get("distance"));
-			satelite.setHealth((BigDecimal) row.get("health"));
+			satelite.setDistance((Integer) row.get("distance"));
+			satelite.setHealth((Integer) row.get("health"));
 
 			satelites.add(satelite);
 
@@ -125,8 +125,8 @@ public class SateliteManagementDaoImpl implements SateliteManagementDao{
 			satelite.setSateliteID((Integer) row.get("sateliteID"));
 			satelite.setName((String) row.get("name"));
 			satelite.setDescription((String) row.get("description"));
-			satelite.setDistance((BigDecimal) row.get("distance"));
-			satelite.setHealth((BigDecimal) row.get("health"));
+			satelite.setDistance((Integer) row.get("distance"));
+			satelite.setHealth((Integer) row.get("health"));
 
 			satelites.add(satelite);
 

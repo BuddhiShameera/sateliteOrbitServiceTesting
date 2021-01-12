@@ -7,8 +7,8 @@ public class SateliteDetails {
 	private int sateliteID;
 	private String name;
 	private String description;
-	private BigDecimal distance;
-	private BigDecimal health;
+	private int distance;
+	private int health;
 	
 	
 	public int getSateliteID() {
@@ -29,16 +29,16 @@ public class SateliteDetails {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public BigDecimal getDistance() {
+	public int getDistance() {
 		return distance;
 	}
-	public void setDistance(BigDecimal distance) {
+	public void setDistance(int distance) {
 		this.distance = distance;
 	}
-	public BigDecimal getHealth() {
+	public int getHealth() {
 		return health;
 	}
-	public void setHealth(BigDecimal health) {
+	public void setHealth(int health) {
 		this.health = health;
 	}
 	 
